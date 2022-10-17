@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+int main() {
+   int n;
+   cin>>n;
+   cout<<"*";
+   for(int i=1;i<=(n-3)/2;i++){
+       cout<<" ";
+   }
+   for(int i=1;i<=(n+1)/2;i++){
+       cout<<"*";
+   }
+   cout<<endl;
+   //second component
+   for(int row=1;row<=(n-3)/2;row++){
+       cout<<"*";
+       for(int i=1;i<=(n-3)/2;i++){
+           cout<<" ";
+       }
+       cout<<"*"<<endl;
+   }
+   //third component
+   for(int i=1;i<=n;i++){
+       cout<<"*";
+   }
+   cout<<endl;
+   for(int row=1;row<=(n-3)/2;row++){
+       for(int i=1;i<=(n-3)/2+1;i++){
+           cout<<" ";
+       }
+       cout<<"*";
+       for(int i=1;i<=(n-3)/2;i++){
+           cout<<" ";
+       }
+       cout<<"*"<<endl;
+   }
+   //fifth component
+   for(int i=1;i<=(n+1)/2;i++){
+       cout<<"*";
+   }
+   for(int i=1;i<=(n-3)/2;i++){
+       cout<<" ";
+   }
+   cout<<"*"<<endl;
+   return 0;
+
+}
+/*
+APPROACH FOR THIS PATTERN:
+First of all, look at the input , it is for seven. Now
+divide the pattern with same view in different components.So First row
+is the first component and secondd and third row are same, so it is second
+component. Now Fourth row is the third component.
+Also, Fifth and Sixth row are same, so they are the Fourth Component.
+And Seventh row is the Fifth Component.
+So, spaces are :(n-3)/2
+Star: (n+1)/2;
+for rows: (n-3)/2
+*/
+
